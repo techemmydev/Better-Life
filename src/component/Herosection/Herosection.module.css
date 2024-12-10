@@ -1,0 +1,115 @@
+/* Outer Container */
+.herosection {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url("../../assets/images/herobg.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 0 2rem; /* Add padding to prevent content from touching the edges */
+}
+
+/* Flex Container for Content */
+.content {
+  margin-top: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px; /* Limit content width on larger screens */
+  width: 100%;
+  gap: 2rem; /* Space between text and image */
+}
+
+/* Text Section */
+.text {
+  flex: 1; /* Equal space */
+}
+
+.text h1 {
+  font-size: 40px;
+  font-family: var(--font-inter);
+  font-weight: 700;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+  color: #122231;
+}
+
+.text p {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #5c6c7a;
+  line-height: 1.5;
+  font-family: var(--font-inter);
+}
+
+/* Image Section */
+.image {
+  flex: 1; /* Equal space */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image img {
+  max-width: 60%; /* Limit image size */
+  height: auto;
+  border-radius: 8px;
+}
+.login {
+  text-decoration: none;
+  color: var(--color--);
+  font-weight: 500;
+  font-family: var(--font-Poppins);
+}
+/* Get Started Button */
+.getstarted {
+  background-color: #009379;
+  font-family: var(--font-Poppins);
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: white;
+  border-radius: 12px;
+  font-weight: 600;
+  border: none;
+  /* padding: 0.5rem 1rem; */
+
+  cursor: pointer;
+}
+
+/* Responsive Design for Mobile Screens */
+@media screen and (max-width: 768px) {
+  .herosection {
+    height: unset;
+  }
+  .ctabuttonmobile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .content {
+    flex-direction: column; /* Stack content vertically */
+    text-align: center; /* Center-align text for mobile */
+  }
+
+  .image {
+    margin-top: 1rem;
+    justify-content: center; /* Center the image */
+  }
+
+  .text h1 {
+    font-size: 1.8rem; /* Adjust heading font size for smaller screens */
+    margin-top: 20%;
+  }
+
+  .text p {
+    font-size: 1rem;
+    line-height: 1.6; /* Slightly increase line spacing for readability */
+  }
+
+  .image img {
+    max-width: 80%; /* Scale image size for mobile screens */
+  }
+}

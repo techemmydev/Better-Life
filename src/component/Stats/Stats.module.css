@@ -1,0 +1,122 @@
+/* Stats Container */
+.statsContainer {
+  padding: 30px;
+}
+
+/* Border Container */
+.boder {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px; /* Space between items */
+  padding: 30px;
+}
+
+/* Each item */
+.item {
+  display: flex;
+  gap: 10px;
+  align-items: center; /* Center content horizontally */
+  justify-content: center; /* Center content vertically */
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #fff;
+  width: 300px; /* Default width for desktop */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center; /* Center align text */
+}
+
+.item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Icon Container */
+.iconContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  background-color: #76de76; /* Green background */
+  border-radius: 50%; /* Circle shape */
+  margin-bottom: 15px; /* Space between icon and text */
+}
+
+.icon {
+  font-size: 24px;
+  color: #fff; /* White color for the icon */
+}
+
+/* Text Container */
+.textContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; /* Center align text */
+}
+
+.number {
+  font-weight: bold;
+  font-size: 20px;
+  font-family: var(--font-rubik);
+}
+
+.text {
+  color: #6b6b6b;
+  font-size: 14px;
+  font-family: var(--font-rubik);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .item {
+    width: 100%; /* Full width for mobile */
+  }
+
+  .iconContainer {
+    width: 50px; /* Smaller circle for icons */
+    height: 50px;
+  }
+
+  .icon {
+    font-size: 20px; /* Smaller icon size */
+  }
+
+  .number {
+    font-size: 30px; /* Slightly smaller font for numbers */
+  }
+
+  .text {
+    font-size: 30px; /* Adjust text size for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .boder {
+    padding: 15px; /* Reduce padding for smaller devices */
+  }
+
+  .item {
+    padding: 15px; /* Compact padding */
+  }
+
+  .iconContainer {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 10px;
+  }
+
+  .icon {
+    font-size: 18px;
+  }
+
+  .number {
+    font-size: 16px;
+  }
+
+  .text {
+    font-size: 10px;
+  }
+}

@@ -1,0 +1,135 @@
+.footer {
+  background-color: #22242a; /* Dark background */
+  padding: 40px 20px;
+  font-family: var(--font-Poppins);
+}
+
+.footer .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer .row {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.footer .col-md-4 {
+  flex: 1;
+  min-width: 250px;
+}
+
+.footer img {
+  max-width: 150px;
+  margin-bottom: 15px;
+}
+
+.footer p {
+  margin: 5px 0;
+  color: white; /* White text */
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.footer h5 {
+  margin-bottom: 15px;
+  font-size: 18px;
+  color: #c7ee42;
+  font-weight: bold;
+}
+
+.footer ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer ul li {
+  margin-bottom: 10px;
+}
+
+.footer ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 14px;
+  transition: color 0.3s ease;
+}
+
+.footer ul li a:hover {
+  color: #c7ee42;
+}
+
+.socialIcons {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.socialIcon {
+  font-size: 13px;
+  color: white;
+  border: 1px solid white; /* White border */
+  border-radius: 50%; /* Circular icons */
+  padding: 8px;
+  transition: all 0.3s ease;
+}
+
+.socialIcon:hover {
+  background-color: #c7ee42; /* Highlight on hover */
+  color: #22242a; /* Dark color for contrast */
+}
+
+/* Flexbox for icons and copyright text */
+.iconsAndCopyright {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 20px;
+  gap: 10px;
+}
+
+.copyright {
+  margin-top: 10px;
+  font-size: 14px;
+  color: white;
+}
+
+/* NavLink styling */
+.navLink {
+  text-decoration: none;
+  color: white;
+  font-size: 14px;
+  transition: color 0.3s ease;
+}
+
+.navLink:hover {
+  color: #c7ee42;
+}
+
+/* Active link styling for NavLink */
+.navLink.active {
+  color: #c7ee42;
+  font-weight: bold;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .footer {
+    text-align: center;
+  }
+
+  .footer .row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer .col-md-4 {
+    margin-bottom: 20px;
+  }
+
+  .iconsAndCopyright {
+    align-items: center;
+  }
+}

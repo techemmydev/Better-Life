@@ -1,0 +1,127 @@
+.statscontainer {
+  background-color: #fbfbfd;
+  border-radius: 50px;
+  font-family: var(--font-Poppins);
+}
+.statsSection {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  text-align: left;
+  padding: 20px;
+}
+
+/* Center the text content within the column */
+.centeredColumn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%; /* Ensure the column takes up full height of the container */
+  text-align: center;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+  line-height: 1.7;
+}
+
+.description {
+  font-size: 16px;
+  color: #666;
+  line-height: 1.5;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.description {
+  font-size: 16px;
+  color: #666;
+  line-height: 1.5;
+}
+.statCard {
+  height: 250px;
+  position: relative;
+  border: none;
+  border-radius: 32px;
+  background-color: #f8faff; /* Light background color */
+  padding: 30px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  /* text-align: center; */
+}
+
+.st {
+  margin-top: 90px;
+}
+.icon {
+  width: 80px;
+  right: 0;
+  position: absolute;
+}
+.icons {
+  width: 80px;
+  left: 0;
+  position: absolute;
+}
+.statValue {
+  font-size: 18px;
+  color: #6c757d;
+  /* margin-bottom: 80px; */
+  text-transform: uppercase;
+}
+
+.statNumber {
+  font-size: 23px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.statLabel {
+  font-size: 14px;
+  color: #888;
+}
+/* Background colors for each card */
+.cardpurple {
+  background-color: #f3f1f8; /* Purple */
+}
+
+.cardgreen {
+  background-color: #f1f7f6; /* Green */
+}
+
+.cardbrown {
+  background-color: #fcf3ee; /* Brown */
+}
+
+.cardblue {
+  background-color: #f2f4fc; /* Blue */
+}
+.statNumber500 {
+  color: #007bff; /* Blue color specifically for "500" */
+}
+@media (max-width: 768px) {
+  .title {
+    font-size: 20px;
+  }
+
+  .description {
+    font-size: 14px;
+  }
+
+  .statNumber {
+    font-size: 28px;
+  }
+
+  .statValue,
+  .statLabel {
+    font-size: 12px;
+  }
+}

@@ -1,0 +1,89 @@
+.contactuscontainer {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: space-between;
+  background-color: black;
+  margin-bottom: 20px;
+  font-family: var(--font-inter);
+  margin-top: 30px;
+}
+
+.bgback {
+  width: 100%; /* Image occupies full width by default */
+  max-width: 100%; /* Prevents image overflow */
+  object-fit: cover;
+}
+
+.co {
+  padding: 3rem;
+}
+
+.title {
+  font-size: 2.2rem;
+  margin: 0;
+  color: white;
+  font-family: var(--font-inter);
+}
+
+.subtitle {
+  margin-top: 10px;
+  font-size: 1rem;
+  color: white;
+  font-family: var(--font-inter);
+}
+
+.socials {
+  display: flex;
+  gap: 15px; /* Space between icons */
+  margin-top: 20px;
+  justify-content: flex-start; /* Center the icons */
+}
+
+.icon {
+  font-size: 20px; /* Size of the icons */
+  color: white; /* Default color */
+  cursor: pointer;
+  transition: transform 0.2s, color 0.2s ease-in-out;
+}
+
+.icon:hover {
+  color: #009379; /* Hover effect - darker shade */
+  transform: scale(1.1); /* Slight zoom on hover */
+}
+
+@media (max-width: 768px) {
+  .contactuscontainer {
+    flex-direction: column; /* Stack content vertically */
+    align-items: center; /* Center the content horizontally */
+    text-align: center; /* Center the text */
+    gap: 20px; /* Add space between the sections */
+  }
+
+  .bgback {
+    width: 90%; /* Slightly smaller image for better fit */
+    margin-top: 20px;
+  }
+
+  .co {
+    padding: 20px; /* Reduce padding for smaller screens */
+  }
+
+  .title {
+    font-size: 1.8rem; /* Slightly smaller font size */
+  }
+
+  .subtitle {
+    font-size: 0.9rem; /* Adjust subtitle font size */
+  }
+
+  .socials {
+    flex-direction: row; /* Ensure icons remain horizontal */
+    gap: 10px; /* Adjust spacing between icons */
+    justify-content: center;
+  }
+
+  .icon {
+    font-size: 1.5rem; /* Adjust icon size */
+  }
+}

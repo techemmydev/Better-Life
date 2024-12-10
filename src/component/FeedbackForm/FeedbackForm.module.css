@@ -1,0 +1,131 @@
+.feedbackForm {
+  position: relative; /* Enable overlay positioning */
+  background-image: url("../../assets/images/cosultaion.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #222;
+  font-family: var(--font-inter);
+  color: #fff;
+  padding: 40px 20px;
+}
+.feedback_yellow {
+  color: #c7ee42;
+  font-family: var(--font-inter);
+  font-size: 10px;
+}
+.feedbackForm h1 {
+  color: grey;
+  font-size: 1.5rem;
+}
+
+.feedbackForm p {
+  color: grey;
+  font-size: 13px;
+}
+
+.feedbackForm label {
+  color: grey;
+
+  font-size: 0.8rem;
+}
+.inputbox {
+  background-color: black;
+  font-size: 12px;
+}
+.inputbox::placeholder {
+  font-size: 9px;
+  color: #999;
+}
+
+/* Ensure inputbox class input fields aren't overridden by global styles */
+
+.feedbackForm::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6); /* Black overlay with 60% opacity */
+  z-index: 1; /* Ensure it stays behind content */
+}
+
+.fee {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative; /* Content above overlay */
+  z-index: 2; /* Ensures text appears above the overlay */
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+  gap: 20px;
+}
+
+.leftContent {
+  flex: 1; /* Take up equal space */
+}
+.leftContent h1 {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: white;
+}
+.rightContent {
+  flex: 1; /* Take up equal space */
+  max-width: 400px; /* Limit card width */
+}
+
+.speechBubble {
+  margin-bottom: 20px;
+}
+.chatd {
+  width: 130px;
+}
+.card {
+  border-radius: 10px;
+}
+.submitbuttons {
+  background-color: #c7ee42;
+  border-radius: 50px;
+  font-size: 12px;
+}
+.inputbackground {
+  background-color: black;
+}
+.privacy {
+  color: gray;
+  font-size: 10px;
+  margin-left: 12px;
+  font-family: var(--font-inter);
+  font-weight: 300;
+}
+/* Responsive Design */
+@media (max-width: 768px) {
+  .fee {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .rightContent {
+    width: 100%; /* Full width for mobile */
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .feedbackForm {
+    padding: 20px 10px; /* Reduce padding for smaller screens */
+  }
+
+  h1 {
+    font-size: 1.2rem;
+  }
+
+  .card {
+    padding: 15px;
+  }
+}

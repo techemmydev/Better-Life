@@ -1,0 +1,51 @@
+.navcontainer {
+  /* font-family: var(--font-inter); */
+  background-color: #f4f7fa;
+}
+.navlogo {
+  width: 70%;
+}
+.navbarNav {
+  display: flex;
+  justify-content: center; /* Centers the links horizontally */
+  gap: 2rem; /* Adds spacing between the links */
+  list-style: none; /* Removes default list styling */
+  margin: 0 auto; /* Centers the container itself */
+  align-items: center; /* Ensures links align properly vertically */
+  font-family: var(--font-inter);
+  color: var(--color--);
+}
+
+.cta {
+  display: flex;
+
+  gap: 2rem;
+  margin-left: auto;
+  list-style: none;
+  align-items: center;
+}
+
+.login {
+  text-decoration: none;
+  color: var(--color--);
+  font-weight: 500;
+  font-family: var(--font-Poppins);
+}
+
+.getstarted {
+  background-color: #009379;
+  font-family: var(--font-Poppins);
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: white;
+  padding: 0.5rem 1.5rem;
+  border-radius: 12px;
+  font-weight: 600;
+  border: none;
+}
+@media (max-width: 768px) {
+  .cta {
+    display: none;
+  }
+}
