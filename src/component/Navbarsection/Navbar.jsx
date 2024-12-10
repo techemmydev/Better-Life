@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./Navbar.module.css";
+import styles from "./navbar.module.css";
 import bllogo from "../../assets/images/bl-logo.svg";
 import { NavLink } from "react-router-dom";
 import Button from "../ButtonComponents/Button";
