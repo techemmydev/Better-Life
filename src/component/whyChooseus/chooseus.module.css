@@ -93,4 +93,7 @@
   .dotimages {
     display: none;
   }
+  .title {
+    padding: 20px;
+  }
 }

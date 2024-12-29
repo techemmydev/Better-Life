@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "./navbar.module.css";
 import bllogo from "../../assets/images/bl-logo.svg";
 import { NavLink } from "react-router-dom";
@@ -12,6 +12,14 @@ const Navbar = ({
   contactUsRef,
   productsRef,
 }) => {
+  const [isNavCollapsed, setIsNavCollapsed] = useState(true);
+
+  const handleToggle = () => setIsNavCollapsed(!isNavCollapsed);
+  const handleNavLinkClick = (ref) => {
+    scrollToSection(ref);
+    setIsNavCollapsed(true); // Close the menu
+  };
+
   return (
     <div>
       <nav className="navbar fixed-top navbar-expand-lg bg-body-tertiary">
@@ -22,50 +30,54 @@ const Navbar = ({
           <button
             className="navbar-toggler"
             type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarScroll"
+            onClick={handleToggle}
             aria-controls="navbarScroll"
-            aria-expanded="false"
+            aria-expanded={!isNavCollapsed}
             aria-label="Toggle navigation"
           >
             <span className="navbar-toggler-icon"></span>
           </button>
 
-          <div className="collapse navbar-collapse" id="navbarScroll">
+          <div
+            className={`collapse navbar-collapse ${
+              isNavCollapsed ? "" : "show"
+            }`}
+            id="navbarScroll"
+          >
             <ul
               className={`navbar-nav ${styles.navbarNav} my-2 my-lg-0 navbar-nav-scroll`}
             >
               <li className="nav-item">
-                <NavLink
-                  className="nav-link"
-                  onClick={() => scrollToSection(productsRef)}
+                <button
+                  className="nav-link btn btn-link"
+                  onClick={() => handleNavLinkClick(productsRef)}
                 >
                   Products
-                </NavLink>
+                </button>
               </li>
               <li className="nav-item">
-                <NavLink
-                  className="nav-link"
-                  onClick={() => scrollToSection(whyChooseUsRef)}
+                <button
+                  className="nav-link btn btn-link"
+                  onClick={() => handleNavLinkClick(whyChooseUsRef)}
                 >
                   Why Better Life
-                </NavLink>
+                </button>
               </li>
               <li className="nav-item">
-                <NavLink
-                  className="nav-link"
-                  onClick={() => scrollToSection(servicesRef)}
+                <button
+                  className="nav-link btn btn-link"
+                  onClick={() => handleNavLinkClick(servicesRef)}
                 >
                   Services
-                </NavLink>
+                </button>
               </li>
               <li className="nav-item">
-                <NavLink
-                  className="nav-link"
-                  onClick={() => scrollToSection(contactUsRef)}
+                <button
+                  className="nav-link btn btn-link"
+                  onClick={() => handleNavLinkClick(contactUsRef)}
                 >
                   Contact Us
-                </NavLink>
+                </button>
               </li>
             </ul>
             <div className={styles.cta}>

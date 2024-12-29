@@ -95,13 +95,12 @@
   }
 
   .image {
-    margin-top: 1rem;
     justify-content: center; /* Center the image */
   }
 
   .text h1 {
     font-size: 1.8rem; /* Adjust heading font size for smaller screens */
-    margin-top: 20%;
+    margin-top: 10%;
   }
 
   .text p {
